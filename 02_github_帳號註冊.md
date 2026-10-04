@@ -22,7 +22,7 @@
 | ❌ 不要用中文、空白或底線 `_` | GitHub 不接受 |
 | ❌ 不要放生日、學號、身分證字號等個資 | 帳號名稱是公開的 |
 
-> 帳號名稱之後可以改，但改了之後舊網址、協作邀請與月報資料夾都會對不上，**盡量一次決定**。
+> 帳號名稱之後可以改，但改了之後舊網址、作品連結與晨會留言紀錄都會對不上，**盡量一次決定**。
 
 ---
 
@@ -53,14 +53,14 @@
 2. 信箱旁若顯示 **Unverified**，按 **Resend verification email**。
 3. 到信箱點驗證連結。
 
-> 沒有驗證 Email 的帳號，無法接受 repo 協作邀請，也可能無法建立 repo。
+> 沒有驗證 Email 的帳號，無法接受老師的邀請，也可能無法建立 repo。
 
 ---
 
 ## 四、註冊完成後
 
-1. **把帳號名稱告訴老師**，老師會把你加入每日回報 repo [daily_report_demo_01](https://github.com/gemini960114/daily_report_demo_01)。
-2. **接受邀請**：收到 Email 或 GitHub 右上角通知後，按 **Accept invitation**。
+1. **把帳號名稱告訴老師**，老師會邀請你，讓你可以在每日回報 repo [daily_report_demo_01](https://github.com/gemini960114/daily_report_demo_01) 的晨會 Issue 留言。
+2. **接受邀請**：老師會邀請你加入課程的 GitHub Organization（讀取權限，可在晨會 Issue 留言）。收到 Email 或 GitHub 右上角通知後，按 **Join** 或 **Accept invitation**。
 3. **開啟兩步驟驗證（2FA）**：GitHub 會要求有提交程式的帳號啟用 2FA，建議一開始就設定。
    - Settings → **Password and authentication** → **Enable two-factor authentication**。
    - 用手機的驗證器 App（Google Authenticator、Microsoft Authenticator 等）掃描 QR Code。
@@ -75,5 +75,5 @@
 |---|---|
 | 帳號名稱一直顯示已被使用 | 加上數字或連字號，例如 `alice-chen-tw` |
 | 收不到驗證信 | 檢查垃圾郵件匣；學校信箱可能擋信，可改用個人信箱 |
-| 看不到老師的邀請 | 先確認 Email 已驗證；直接開啟 `https://github.com/gemini960114/daily_report_demo_01/invitations` |
+| 看不到老師的邀請 | 先確認 Email 已驗證；直接開啟 `https://github.com/settings/organizations` 查看待接受的邀請 |
 | 忘記密碼 | 登入頁按 **Forgot password?**，用註冊信箱重設 |
