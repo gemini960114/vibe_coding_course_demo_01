@@ -261,11 +261,13 @@ gh --version
 where.exe gh
 ```
 
-需要登入 GitHub 時：
+需要登入 GitHub 時（使用瀏覽器裝置驗證，不需要 Personal Access Token）：
 
 ```powershell
-gh auth login
+gh auth login --web --git-protocol https
 ```
+
+畫面會顯示一組一次性代碼，按 Enter 開啟瀏覽器後輸入該代碼並授權即可。完成後用 `gh auth status` 確認。
 
 ---
 

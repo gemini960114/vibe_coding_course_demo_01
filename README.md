@@ -10,6 +10,8 @@ Windows 10/11 上用 **Antigravity** 或 **Claude**，以自然語言完成 Pyth
 | `AGENTS.md` | 課程環境規則（Antigravity 讀取） |
 | `CLAUDE.md` | 課程環境規則（Claude 讀取，內容同 `AGENTS.md`） |
 | `範例練習_uv_nodejs_github.md` | uv、Node.js、Git/GitHub 的自然語言練習範例 |
+| `examples/fourbar-mujoco/` | 進階範例：React + MuJoCo（WebAssembly）四連桿運動學模擬器 |
+| `.agents/skills/`、`.claude/skills/` | 投影片 Skill：`baoyu-slide-deck`、`baoyu-image-gen`、`baoyu-url-to-markdown`（來源 [jimliu/baoyu-skills](https://github.com/jimliu/baoyu-skills)，MIT 授權；兩份內容相同） |
 
 ## 課程環境規則在做什麼
 
@@ -22,7 +24,7 @@ Windows 10/11 上用 **Antigravity** 或 **Claude**，以自然語言完成 Pyth
 
 ## 使用方式
 
-1. 建立自己的專案資料夾，例如 `C:\Users\<你的帳號>\Projects\snake-game`。
+1. 建立自己的專案資料夾，例如 `C:\Users\<你的帳號>\Projects\my-practice`。
 2. 把本 repo 的 `AGENTS.md` 與 `CLAUDE.md` 複製到該資料夾根目錄。
 3. 用 Antigravity 開啟資料夾（或在該資料夾啟動 Claude）。
 4. 照著 `範例練習_uv_nodejs_github.md` 的自然語言指令練習。

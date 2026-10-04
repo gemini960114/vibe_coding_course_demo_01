@@ -1,6 +1,6 @@
 # 課程開發環境規則（Project Rule）
 
-本專案在 Windows 10/11 上開發，已依 `windows_ai_vibe_coding_setup.md` 安裝完成以下工具。執行任何操作前請遵守本規則。
+本專案在 Windows 10/11 上開發，已依 [Windows AI / Vibe Coding 開發環境安裝指南](https://github.com/gemini960114/vibe_coding_course_demo_01/blob/main/windows_ai_vibe_coding_setup.md) 安裝完成以下工具。執行任何操作前請遵守本規則。
 
 ## 1. 已安裝的工具
 
@@ -13,26 +13,44 @@
 
 - 終端機是 **Windows PowerShell**，請使用 PowerShell 語法，不要用 bash 語法。
 - 不要重新安裝上述工具，也不要另外安裝 Python 官方安裝檔、Anaconda 或 nvm。
-- 若 `npm` / `npx` 出現「已停用指令碼執行，無法載入 npm.ps1」，改用 `npm.cmd` / `npx.cmd`，並提醒使用者參考安裝指南第 2 節。
+- 若 `npm` / `npx` 出現「已停用指令碼執行，無法載入 npm.ps1」，改用 `npm.cmd` / `npx.cmd`，並提醒使用者參考[安裝指南](https://github.com/gemini960114/vibe_coding_course_demo_01/blob/main/windows_ai_vibe_coding_setup.md)第 2 節。
+- 處理中文前，先在同一個終端機設定 UTF-8，避免 `gh` / `git` 的中文輸出變亂碼：
+  ```powershell
+  [Console]::OutputEncoding = [Text.Encoding]::UTF8; $OutputEncoding = [Text.Encoding]::UTF8
+  git config --global core.quotepath false
+  ```
+- 寫入含中文的檔案一律用編輯工具存成 UTF-8（無 BOM），不要用 Windows PowerShell 5.1 的 `Set-Content` / `Out-File` / `>` 預設編碼。
 
 ## 2. Python：一律使用 uv 與 .venv
 
-- 開始寫 Python 前，先在專案根目錄建立虛擬環境：
+- 建立新專案一律加 `--no-package`（才會產生 `main.py`，結構最單純）：
   ```powershell
-  uv venv
+  uv init <名稱> --python 3.12 --no-package
   ```
-  需要指定版本時用 `uv venv --python 3.12`。電腦上沒有該版本時 uv 會自動下載，不需要另外安裝 Python。
-- 安裝套件：有 `pyproject.toml` 的專案用 `uv add <套件>`；單純練習用 `uv pip install <套件>`。
+- 虛擬環境：
+  - 有 `pyproject.toml` 時，`uv add` / `uv run` 會自動建立 `.venv`；clone 下來的專案用 `uv sync` 還原。
+  - 沒有 `pyproject.toml` 的單純練習資料夾，且**還沒有** `.venv` 時才執行 `uv venv`（已存在再執行會報錯）。
+  - 電腦上沒有指定的 Python 版本時 uv 會自動下載，不需要另外安裝 Python。
+- 安裝套件：有 `pyproject.toml` 用 `uv add <套件>`；沒有則用 `uv pip install <套件>`。
 - 執行程式：`uv run python main.py`。
 - **禁止**使用全域的 `pip install`、`python -m pip install`，也不要把套件裝到虛擬環境以外的地方。
 - `.venv/` 必須加入 `.gitignore`，不可提交到 Git。
 
 ## 3. Node.js
 
-- 建立專案用官方腳手架，例如：
-  - React：`npm create vite@latest <名稱> -- --template react`
-  - Next.js：`npx create-next-app@latest <名稱>`
+- 建立專案用官方腳手架，並使用**不會詢問問題**的寫法（互動提問會讓 AI 卡住）：
+  - React：
+    ```powershell
+    npm create --yes vite@latest <名稱> -- --template react --no-interactive --no-immediate
+    ```
+  - Next.js：
+    ```powershell
+    npx --yes create-next-app@latest <名稱> --yes --ts --app --tailwind --eslint --no-src-dir --use-npm
+    ```
+    create-next-app 會在新專案裡自動 `git init`，並產生它自己的 `AGENTS.md` / `CLAUDE.md`，屬正常現象；第一次安裝可能需要數分鐘。
 - 套件裝在專案內（`npm install <套件>`），不要用 `npm install -g`。
+- `npm run dev`、`streamlit run` 這類**不會自己結束**的伺服器要在背景執行，啟動後把網址告訴使用者。
+- 需要使用者鍵盤輸入的程式（例如 `input()` 遊戲）不要由 AI 執行，改為告訴使用者執行指令讓他自己操作。
 - `node_modules/` 必須加入 `.gitignore`。
 
 ## 4. Git 與 GitHub
