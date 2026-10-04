@@ -1,6 +1,6 @@
 # 課程開發環境規則（Project Rule）
 
-本專案在 Windows 10/11 上開發，已依 [Windows AI / Vibe Coding 開發環境安裝指南](https://github.com/gemini960114/vibe_coding_course_demo_01/blob/main/windows_ai_vibe_coding_setup.md) 安裝完成以下工具。執行任何操作前請遵守本規則。
+本專案在 Windows 10/11 上開發，已依 [Windows AI / Vibe Coding 開發環境安裝指南](https://github.com/gemini960114/vibe_coding_course_demo_01/blob/main/01_windows_環境安裝.md) 安裝完成以下工具。執行任何操作前請遵守本規則。
 
 ## 1. 已安裝的工具
 
@@ -13,7 +13,7 @@
 
 - 終端機是 **Windows PowerShell**，請使用 PowerShell 語法，不要用 bash 語法。
 - 不要重新安裝上述工具，也不要另外安裝 Python 官方安裝檔、Anaconda 或 nvm。
-- 若 `npm` / `npx` 出現「已停用指令碼執行，無法載入 npm.ps1」，改用 `npm.cmd` / `npx.cmd`，並提醒使用者參考[安裝指南](https://github.com/gemini960114/vibe_coding_course_demo_01/blob/main/windows_ai_vibe_coding_setup.md)第 2 節。
+- 若 `npm` / `npx` 出現「已停用指令碼執行，無法載入 npm.ps1」，改用 `npm.cmd` / `npx.cmd`，並提醒使用者參考[安裝指南](https://github.com/gemini960114/vibe_coding_course_demo_01/blob/main/01_windows_環境安裝.md)第 2 節。
 - 處理中文前，先在同一個終端機設定 UTF-8，避免 `gh` / `git` 的中文輸出變亂碼：
   ```powershell
   [Console]::OutputEncoding = [Text.Encoding]::UTF8; $OutputEncoding = [Text.Encoding]::UTF8

@@ -547,3 +547,12 @@ $env:Path = [Environment]::GetEnvironmentVariable("Path", "Machine") + ";" +
 ```
 
 這不是 PATH 問題，也不需要重裝，請回到 **第 2 節** 設定執行原則，或改用 `npm.cmd` / `npx.cmd`。
+
+---
+
+# 下一步
+
+安裝完成後，請依序進行：
+
+1. [GitHub 帳號註冊](02_github_帳號註冊.md)
+2. [Antigravity 入門](03_antigravity_入門.md)
