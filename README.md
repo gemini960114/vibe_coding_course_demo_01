@@ -11,7 +11,7 @@ Windows 10/11 上用 **Antigravity** 或 **Claude**，以自然語言完成 Pyth
 | `CLAUDE.md` | 課程環境規則（Claude 讀取，內容同 `AGENTS.md`） |
 | `範例練習_uv_nodejs_github.md` | uv、Node.js、Git/GitHub 的自然語言練習範例 |
 | `examples/fourbar-mujoco/` | 進階範例：React + MuJoCo（WebAssembly）四連桿運動學模擬器 |
-| `.agents/skills/`、`.claude/skills/` | 投影片 Skill：`baoyu-slide-deck`、`baoyu-image-gen`、`baoyu-url-to-markdown`（來源 [jimliu/baoyu-skills](https://github.com/jimliu/baoyu-skills)，MIT 授權；兩份內容相同） |
+| `.agents/skills/`、`.claude/skills/` | 投影片與資訊圖表 Skill：`baoyu-slide-deck`、`baoyu-infographic`、`baoyu-image-gen`、`baoyu-url-to-markdown`（來源 [jimliu/baoyu-skills](https://github.com/jimliu/baoyu-skills)，MIT 授權；兩份內容相同） |
 
 ## 相關 repo
 

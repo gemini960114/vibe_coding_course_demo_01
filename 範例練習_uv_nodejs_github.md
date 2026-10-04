@@ -249,7 +249,7 @@ uv pip list
 
 ---
 
-## Part 5. 用 Skill 把教材做成投影片（baoyu-slide-deck）
+## Part 5. 用 Skill 把教材做成投影片與資訊圖表（baoyu-slide-deck / baoyu-infographic）
 
 本 repo 已內建以下 Skill（`.agents/skills/` 給 Antigravity、`.claude/skills/` 給 Claude，內容相同），來源為 [jimliu/baoyu-skills](https://github.com/jimliu/baoyu-skills)（MIT 授權）：
 
@@ -257,6 +257,7 @@ uv pip list
 |---|---|---|
 | `baoyu-slide-deck` | 讀 Markdown → 產生大綱、每頁提示詞、投影片圖片，最後合併成 PPTX / PDF | **必要**（主角） |
 | `baoyu-image-gen` | 呼叫圖片生成 API 產生每一頁圖片 | **必要**（執行環境沒有內建產圖工具時，slide-deck 會改用它） |
+| `baoyu-infographic` | 把內容濃縮成**一張**資訊圖表（21 種版面 × 22 種風格） | 選用（與 slide-deck 同樣靠 image-gen 產圖） |
 | `baoyu-url-to-markdown` | 把網頁文章轉成 Markdown，當作投影片素材 | 選用 |
 
 ### 5-1. 事前準備
@@ -328,5 +329,56 @@ Antigravity 說法：
 幫我寫一篇 800 字的 Markdown 短文「我用 AI 做的第一個遊戲」，內容根據我這個專案的 README 與 git 紀錄，
 存成 my-story.md，然後用 baoyu-slide-deck 做成 8 頁 sketch-notes 風格的中文投影片。
 ```
+
+### 5-4. 資訊圖表（baoyu-infographic）
+
+投影片是「多頁、適合閱讀」，資訊圖表是「一張圖看懂重點」，適合放在 README、海報或社群貼文。
+
+| 參數 | 說明 |
+|---|---|
+| `--layout <版面>` | 內容結構，例如 `linear-progression`（流程）、`binary-comparison`（A vs B）、`comparison-matrix`（多項比較）、`tree-branching`（分類）、`hub-spoke`（中心概念）、`winding-roadmap`（學習路線）、`bento-grid`（總覽，預設） |
+| `--style <風格>` | 視覺風格，例如 `hand-drawn-edu`（教學手繪）、`technical-schematic`（工程藍圖）、`chalkboard`、`corporate-memphis`、`ikea-manual`、`pixel-art`、`craft-handmade`（預設） |
+| `--aspect` | `landscape`（16:9）、`portrait`（9:16）、`square`（1:1），或自訂如 `3:4` |
+| `--lang zh` | 圖中文字語言 |
+
+產出位置：`infographic/<主題>/`。沒有指定版面或風格時，Skill 會先分析內容並推薦幾組組合讓你選。
+
+**範例 P：環境安裝流程圖（流程型）**
+
+```text
+/baoyu-infographic windows_ai_vibe_coding_setup.md --layout linear-progression --style hand-drawn-edu --aspect portrait --lang zh
+```
+
+Antigravity 說法：
+
+```text
+用 baoyu-infographic 把 windows_ai_vibe_coding_setup.md 的安裝步驟做成一張直式、手繪教學風的繁體中文流程資訊圖表，
+從檢查 Windows 版本一路到安裝 Notepad++，每一步標出要執行的工具名稱。
+```
+
+**範例 Q：四連桿機構分類（分類型）**
+
+```text
+/baoyu-infographic examples/fourbar-mujoco/README.md --layout tree-branching --style technical-schematic --aspect landscape --lang zh
+```
+
+延伸說法：「以 Grashof 條件 s + l ≤ p + q 為根，分出曲柄搖桿、雙曲柄、雙搖桿、三搖桿四類，每類畫出簡圖並註明哪一根是最短桿。」
+
+**範例 R：uv vs pip、React vs Next.js（比較型）**
+
+```text
+幫我寫一份 notes/react-vs-nextjs.md，比較 React（Vite）與 Next.js 在用途、前後端、啟動指令、適合的專案上的差異，
+再用 baoyu-infographic 以 binary-comparison 版面、corporate-memphis 風格做成一張橫式繁體中文資訊圖表。
+```
+
+**範例 S：本課程學習路線圖（路線型）**
+
+```text
+用 baoyu-infographic 把 範例練習_uv_nodejs_github.md 整理成一張「Vibe Coding 學習路線圖」，
+用 winding-roadmap 版面、pixel-art 風格、正方形、繁體中文，
+路線依序為：安裝環境 → uv / Python → React → Next.js → GitHub → 每日回報 → 做投影片。
+```
+
+> 課堂建議：先讓 Skill 推薦版面與風格（不要一開始就指定參數），讓學生體會「同一份內容換版面，傳達重點就不同」。
 
 > 注意：產生的投影片是**圖片**，文字錯字要修改提示詞後重新產生該頁（`--regenerate`），不要用程式在圖片上覆蓋文字（Skill 本身也禁止這麼做）。
