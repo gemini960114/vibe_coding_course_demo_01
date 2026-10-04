@@ -1,0 +1,81 @@
+name: 部署範例到 GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "examples/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: examples/fourbar-mujoco/package-lock.json
+
+      - name: 打包四連桿模擬器
+        working-directory: examples/fourbar-mujoco
+        env:
+          BASE_PATH: /${{ github.event.repository.name }}/fourbar-mujoco/
+        run: |
+          npm ci
+          npm run build
+
+      - name: 組合網站內容
+        run: |
+          mkdir -p _site
+          cp -r examples/fourbar-mujoco/dist _site/fourbar-mujoco
+          cat > _site/index.html <<'HTML'
+          <!doctype html>
+          <html lang="zh-Hant">
+          <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Vibe Coding 課程範例</title>
+            <style>
+              body { font-family: system-ui, "Microsoft JhengHei", sans-serif; max-width: 720px; margin: 48px auto; padding: 0 16px; line-height: 1.7; color: #1d2330; background: #fff; }
+              @media (prefers-color-scheme: dark) { body { color: #e7eaf0; background: #12151b; } a { color: #6b9cff; } }
+              a { color: #2f6fdb; }
+              li { margin: 8px 0; }
+            </style>
+          </head>
+          <body>
+            <h1>Vibe Coding 課程範例</h1>
+            <ul>
+              <li><a href="fourbar-mujoco/">四連桿機構運動學模擬器</a>（React + MuJoCo WebAssembly）</li>
+            </ul>
+            <p>課程講義：<a href="https://github.com/gemini960114/vibe_coding_course_demo_01">gemini960114/vibe_coding_course_demo_01</a></p>
+          </body>
+          </html>
+          HTML
+          sed -i 's/^          //' _site/index.html
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
