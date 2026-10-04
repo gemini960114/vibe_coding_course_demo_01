@@ -13,6 +13,13 @@ Windows 10/11 上用 **Antigravity** 或 **Claude**，以自然語言完成 Pyth
 | `examples/fourbar-mujoco/` | 進階範例：React + MuJoCo（WebAssembly）四連桿運動學模擬器 |
 | `.agents/skills/`、`.claude/skills/` | 投影片 Skill：`baoyu-slide-deck`、`baoyu-image-gen`、`baoyu-url-to-markdown`（來源 [jimliu/baoyu-skills](https://github.com/jimliu/baoyu-skills)，MIT 授權；兩份內容相同） |
 
+## 相關 repo
+
+| Repo | 用途 |
+|---|---|
+| 本 repo（公開） | 安裝指南、課程規則、練習範例、投影片 Skill |
+| [daily_report_demo_01](https://github.com/gemini960114/daily_report_demo_01)（私有，需老師邀請） | 每日工作回報：學生用自然語言寫晨會報告，自動寫入月報、push 並留言到當日 Issue |
+
 ## 課程環境規則在做什麼
 
 讓 AI 知道電腦上已經安裝好哪些工具，並遵守以下規範：
