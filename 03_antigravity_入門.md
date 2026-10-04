@@ -110,7 +110,8 @@ Antigravity 以「資料夾」為單位工作，AI 只會在你開啟的資料�
 幫我用瀏覽器裝置驗證方式登入 GitHub CLI（gh auth login --web），
 不要用 personal access token。請在背景執行登入流程，
 把跳出來的一次性代碼和驗證網址直接貼給我，我會自己去瀏覽器輸入代碼；
-我跟你說完成之後，你再用 gh auth status 確認登入成功。
+我跟你說完成之後，你再用 gh auth status 確認登入成功，
+接著執行 gh auth setup-git，並檢查 git 的 user.name 與 user.email，沒有設定的話用我的 GitHub 帳號與 noreply 信箱設定好。
 ```
 
 依 AI 給的網址開啟瀏覽器、輸入代碼並授權，回到對話框說「完成了」。

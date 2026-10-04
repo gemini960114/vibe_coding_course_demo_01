@@ -61,6 +61,18 @@
   ```
   - **不要**要求或使用 Personal Access Token。
   - 登入流程會顯示一組一次性代碼與網址，請直接把代碼與網址貼給使用者，由使用者自己在瀏覽器輸入；使用者說完成後，再用 `gh auth status` 確認。
+- 登入成功後，完成 Git 的身分與認證設定（只需做一次；未設定時第一次 commit 會出現「Author identity unknown」而失敗）：
+  ```powershell
+  gh auth setup-git
+  git config --global user.name    # 沒有輸出代表尚未設定
+  git config --global user.email
+  ```
+  尚未設定時，用使用者的 GitHub 帳號與 noreply 信箱設定（不會公開真實 Email）：
+  ```powershell
+  $u = gh api user | ConvertFrom-Json
+  git config --global user.name  $u.login
+  git config --global user.email "$($u.id)+$($u.login)@users.noreply.github.com"
+  ```
 - commit 訊息用繁體中文，簡要說明「做了什麼」。
 - push 前先 `git status` 確認要提交的檔案；不要提交 `.venv/`、`node_modules/`、`.env`、金鑰或密碼。
 - **禁止**在未經使用者同意下執行 `git push --force`、`git reset --hard`、刪除分支或刪除 GitHub repo。
