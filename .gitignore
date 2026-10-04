@@ -1,0 +1,8 @@
+.venv/
+node_modules/
+.env
+*.token
+gitlab_token.txt
+__pycache__/
+.DS_Store
+Thumbs.db
