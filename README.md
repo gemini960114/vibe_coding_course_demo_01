@@ -9,7 +9,7 @@ Windows 10/11 上用 **Antigravity** 或 **Claude**，以自然語言完成 Pyth
 | # | 單元 | 講義 | 完成時你會… |
 |---|---|---|---|
 | 01 | 安裝開發環境 | [01_windows_環境安裝.md](01_windows_環境安裝.md) | 裝好 Git、uv、Node.js、GitHub CLI、Antigravity 等工具 |
-| 02 | 註冊 GitHub 帳號 | [02_github_帳號註冊.md](02_github_帳號註冊.md) | 有一個英文帳號、Email 已驗證、接受老師的 repo 邀請 |
+| 02 | 註冊 GitHub 帳號 | [02_github_帳號註冊.md](02_github_帳號註冊.md) | 有一個英文帳號、Email 已驗證、接受老師的 nchc-class 邀請 |
 | 03 | Antigravity 入門 | [03_antigravity_入門.md](03_antigravity_入門.md) | 會開專案、放課程規則、用自然語言下指令，並登入 GitHub CLI |
 | 04 | uv 與 Python | [04_uv_python.md](04_uv_python.md) | 用 uv 建立 Python 專案，請 AI 做出小遊戲或小工具 |
 | 05 | React 與 Next.js | [05_nodejs_react_nextjs.md](05_nodejs_react_nextjs.md) | 做出 React 網頁、看懂 Next.js 前後端；進階：[四連桿模擬器](examples/fourbar-mujoco/) |

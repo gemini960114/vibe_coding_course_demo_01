@@ -60,7 +60,7 @@
 ## 四、註冊完成後
 
 1. **把帳號名稱告訴老師**，老師會邀請你，讓你可以在每日回報 repo [daily_report_demo_01](https://github.com/nchc-class/daily_report_demo_01) 的晨會 Issue 留言。
-2. **接受邀請**：老師會邀請你加入課程的 GitHub Organization（讀取權限，可在晨會 Issue 留言）。收到 Email 或 GitHub 右上角通知後，按 **Join** 或 **Accept invitation**。
+2. **接受邀請**：老師會邀請你加入課程的 GitHub Organization **nchc-class**（讀取權限，可在晨會 Issue 留言）。收到 Email 或 GitHub 右上角通知後按 **Join**，或直接開啟 <https://github.com/orgs/nchc-class/invitation>。
 3. **開啟兩步驟驗證（2FA）**：GitHub 會要求有提交程式的帳號啟用 2FA，建議一開始就設定。
    - Settings → **Password and authentication** → **Enable two-factor authentication**。
    - 用手機的驗證器 App（Google Authenticator、Microsoft Authenticator 等）掃描 QR Code。
