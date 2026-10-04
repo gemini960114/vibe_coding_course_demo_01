@@ -10,3 +10,8 @@ dist/
 /skills/
 slide-deck/
 infographic/
+
+# 超過 GitHub 100 MB 上限的投影片只留本地（已上傳 PDF 版）
+slides/把 ChatGPT 的大腦搬進你的筆電：用 AI Agent 幫你整理文件、做研究分析、開發程式.pptx
+# 投影片原始檔只留本地（避免 repo 與 clone 過大）
+slides/四連桿教學.pptx
