@@ -2,6 +2,8 @@
 
 在瀏覽器中用 **MuJoCo 物理引擎（WebAssembly 版）** 模擬四連桿機構，並與解析解比對。
 
+**線上版**：<https://gemini960114.github.io/vibe_coding_course_demo_01/fourbar-mujoco/>（推送到 `main` 時由 GitHub Actions 自動部署到 GitHub Pages）
+
 ![四連桿模擬器畫面](docs/screenshot.png)
 
 ## 功能

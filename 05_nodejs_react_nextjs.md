@@ -84,6 +84,8 @@
 
 完成品：[`examples/fourbar-mujoco/`](examples/fourbar-mujoco/)（可直接 `npm install` → `npm run dev` 執行）。
 
+**線上版**（不用安裝，直接用瀏覽器開）：<https://gemini960114.github.io/vibe_coding_course_demo_01/fourbar-mujoco/>
+
 ![四連桿模擬器](examples/fourbar-mujoco/docs/screenshot.png)
 
 **範例 J：用自然語言從零做出來**

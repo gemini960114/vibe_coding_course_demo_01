@@ -12,7 +12,7 @@ Windows 10/11 上用 **Antigravity** 或 **Claude**，以自然語言完成 Pyth
 | 02 | 註冊 GitHub 帳號 | [02_github_帳號註冊.md](02_github_帳號註冊.md) | 有一個英文帳號、Email 已驗證、接受老師的 nchc-class 邀請 |
 | 03 | Antigravity 入門 | [03_antigravity_入門.md](03_antigravity_入門.md) | 會開專案、放課程規則、用自然語言下指令，並登入 GitHub CLI |
 | 04 | uv 與 Python | [04_uv_python.md](04_uv_python.md) | 用 uv 建立 Python 專案，請 AI 做出小遊戲或小工具 |
-| 05 | React 與 Next.js | [05_nodejs_react_nextjs.md](05_nodejs_react_nextjs.md) | 做出 React 網頁、看懂 Next.js 前後端；進階：[四連桿模擬器](examples/fourbar-mujoco/) |
+| 05 | React 與 Next.js | [05_nodejs_react_nextjs.md](05_nodejs_react_nextjs.md) | 做出 React 網頁、看懂 Next.js 前後端；進階：[四連桿模擬器](examples/fourbar-mujoco/)（[線上版](https://gemini960114.github.io/vibe_coding_course_demo_01/fourbar-mujoco/)） |
 | 06 | Git / GitHub | [06_git_github.md](06_git_github.md) | 用自然語言 commit、push，把作品放上自己的 GitHub |
 | 07 | 每日工作回報 | [07_每日回報.md](07_每日回報.md)、[daily_report_demo_01](https://github.com/nchc-class/daily_report_demo_01) | 每天說「今天我要做…」，自動寫本地月報、留言到晨會 Issue |
 | 08 | 投影片與資訊圖表 | [08_投影片與資訊圖表.md](08_投影片與資訊圖表.md) | 用 Skill 把 Markdown 做成投影片與資訊圖表 |
