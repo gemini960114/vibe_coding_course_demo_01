@@ -14,7 +14,7 @@ Windows 10/11 上用 **Antigravity** 或 **Claude**，以自然語言完成 Pyth
 | 04 | uv 與 Python | [04_uv_python.md](04_uv_python.md) | 用 uv 建立 Python 專案，請 AI 做出小遊戲或小工具 |
 | 05 | React 與 Next.js | [05_nodejs_react_nextjs.md](05_nodejs_react_nextjs.md) | 做出 React 網頁、看懂 Next.js 前後端；進階：[四連桿模擬器](examples/fourbar-mujoco/) |
 | 06 | Git / GitHub | [06_git_github.md](06_git_github.md) | 用自然語言 commit、push，把作品放上自己的 GitHub |
-| 07 | 每日工作回報 | [07_每日回報.md](07_每日回報.md)、[daily_report_demo_01](https://github.com/gemini960114/daily_report_demo_01) | 每天說「今天我要做…」，自動寫本地月報、留言到晨會 Issue |
+| 07 | 每日工作回報 | [07_每日回報.md](07_每日回報.md)、[daily_report_demo_01](https://github.com/nchc-class/daily_report_demo_01) | 每天說「今天我要做…」，自動寫本地月報、留言到晨會 Issue |
 | 08 | 投影片與資訊圖表 | [08_投影片與資訊圖表.md](08_投影片與資訊圖表.md) | 用 Skill 把 Markdown 做成投影片與資訊圖表 |
 
 ## 其他檔案
@@ -30,7 +30,7 @@ Windows 10/11 上用 **Antigravity** 或 **Claude**，以自然語言完成 Pyth
 | Repo | 用途 |
 |---|---|
 | 本 repo（公開） | 講義 01–08、課程規則、範例完成品、投影片與資訊圖表 Skill |
-| [daily_report_demo_01](https://github.com/gemini960114/daily_report_demo_01)（私有，需老師邀請） | 07 每日工作回報：學生用自然語言寫晨會報告，自動寫入本地月報並留言到老師建立的當日 Issue |
+| [daily_report_demo_01](https://github.com/nchc-class/daily_report_demo_01)（私有，需老師邀請） | 07 每日工作回報：學生用自然語言寫晨會報告，自動寫入本地月報並留言到老師建立的當日 Issue |
 
 ## 課程環境規則在做什麼
 
