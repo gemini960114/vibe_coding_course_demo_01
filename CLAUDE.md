@@ -1,6 +1,6 @@
 # 課程開發環境規則（Project Rule）
 
-本專案在 Windows 10/11 上開發，已依《Windows AI / Vibe Coding 開發環境安裝指南》安裝完成以下工具。執行任何操作前請遵守本規則。
+本專案在 Windows 10/11 上開發，已依 `windows_ai_vibe_coding_setup.md` 安裝完成以下工具。執行任何操作前請遵守本規則。
 
 ## 1. 已安裝的工具
 

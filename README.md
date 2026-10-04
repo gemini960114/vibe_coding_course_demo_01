@@ -6,6 +6,7 @@ Windows 10/11 上用 **Antigravity** 或 **Claude**，以自然語言完成 Pyth
 
 | 檔案 | 說明 |
 |---|---|
+| `windows_ai_vibe_coding_setup.md` | **第一步**：Windows 開發環境安裝指南（Git、uv、Node.js、GitHub CLI、ChatGPT Desktop、Antigravity IDE、Notepad++） |
 | `AGENTS.md` | 課程環境規則（Antigravity 讀取） |
 | `CLAUDE.md` | 課程環境規則（Claude 讀取，內容同 `AGENTS.md`） |
 | `範例練習_uv_nodejs_github.md` | uv、Node.js、Git/GitHub 的自然語言練習範例 |
@@ -30,4 +31,5 @@ Windows 10/11 上用 **Antigravity** 或 **Claude**，以自然語言完成 Pyth
 
 ## 前置條件
 
-已在 Windows 10 1809+ / Windows 11 安裝 Git、uv、Node.js LTS、GitHub CLI，並準備好 GitHub 帳號。
+1. 依 `windows_ai_vibe_coding_setup.md` 完成 Windows 10 1809+ / Windows 11 開發環境安裝。
+2. 註冊 GitHub 帳號。

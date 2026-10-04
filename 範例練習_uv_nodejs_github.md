@@ -1,7 +1,7 @@
 # 範例練習：uv × Node.js × GitHub（自然語言版）
 
 > 前提：
-> - 已完成《Windows AI / Vibe Coding 開發環境安裝指南》的所有安裝。
+> - 已完成 [`windows_ai_vibe_coding_setup.md`](windows_ai_vibe_coding_setup.md)（Windows AI / Vibe Coding 開發環境安裝指南）的所有安裝。
 > - 專案根目錄已放入本 repo 的 `AGENTS.md`（Antigravity）與 `CLAUDE.md`（Claude）課程環境規則，AI 會自動遵守「Python 一律用 uv + .venv」等規範。
 > - 以下 `text` 區塊都是**直接貼到 Antigravity Agent 對話框**的自然語言指令。
 
