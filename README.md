@@ -21,6 +21,7 @@ Windows 10/11 上用 **Antigravity** 或 **Claude**，以自然語言完成 Pyth
 
 | 檔案 | 給誰看 | 說明 |
 |---|---|---|
+| `slides/` | 學生 | 課程投影片：PDF 放在 repo，PowerPoint 原始檔放在 [Release](https://github.com/gemini960114/vibe_coding_course_demo_01/releases/tag/slides-2026-10)（不隨 clone 下載），見 [slides/README.md](slides/README.md) |
 | `examples/fourbar-mujoco/` | 學生 | 05 的進階範例完成品：React + MuJoCo（WebAssembly）四連桿運動學模擬器 |
 | `AGENTS.md` / `CLAUDE.md` | AI | 課程環境規則（Antigravity 讀 `AGENTS.md`、Claude 讀 `CLAUDE.md`，內容相同） |
 | `.agents/skills/`、`.claude/skills/` | AI | 08 使用的 Skill：`baoyu-slide-deck`、`baoyu-infographic`、`baoyu-image-gen`、`baoyu-url-to-markdown`（來源 [jimliu/baoyu-skills](https://github.com/jimliu/baoyu-skills)，MIT 授權；兩份內容相同） |
